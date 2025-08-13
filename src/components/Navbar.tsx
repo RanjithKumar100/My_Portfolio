@@ -56,7 +56,7 @@ const Navbar = () => {
               <div className="p-2 bg-gradient-to-r from-purple-600 to-cyan-600 rounded-lg">
                 <Brain className="w-6 h-6 text-white" />
               </div>
-              <span className="text-2xl font-bold gradient-text">Ranjith</span>
+              <span className="text-3xl font-bold gradient-text">Ranjith Kumar</span>
             </motion.div>
 
             {/* Desktop Navigation */}

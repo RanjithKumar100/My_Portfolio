@@ -74,7 +74,7 @@ const Projects = () => {
     {
       title: 'Data Structures & Algorithms',
       description: 'Comprehensive implementation of various data structures and algorithms in C++ and Python. Includes sorting algorithms, graph algorithms, dynamic programming solutions, and competitive programming solutions.',
-      image: 'https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: 'data_structures.png',
       technologies: ['C++', 'Python', 'Data Structures', 'Algorithms', 'Problem Solving'],
       github: 'https://github.com/RanjithKumar100/Coding-Problems',
       demo: 'https://demo-link.com',

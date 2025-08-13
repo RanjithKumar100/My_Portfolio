@@ -1,13 +1,13 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Award, Users, Coffee, Code2, Trophy, Target } from 'lucide-react';
+import { Award, Users,FolderKanban, Code2, Computer, Trophy, Target } from 'lucide-react';
 
 const About = () => {
   const stats = [
-    { icon: Code2, label: 'Projects Completed', value: '10+', color: 'text-purple-400' },
-    { icon: Users, label: 'Technologies Mastered', value: '15+', color: 'text-cyan-400' },
+    { icon: FolderKanban, label: 'Projects Completed', value: '5+', color: 'text-purple-400' },
+    { icon: Computer, label: 'Technologies Mastered', value: '4+', color: 'text-cyan-400' },
     { icon: Award, label: 'CGPA', value: '8.25', color: 'text-green-400' },
-    { icon: Coffee, label: 'Cups of Coffee', value: '500+', color: 'text-yellow-400' },
+    { icon: Code2, label: 'Hours of Coding', value: '500+', color: 'text-yellow-400' },
     { icon: Trophy, label: 'Certifications', value: '8+', color: 'text-orange-400' },
     { icon: Target, label: 'Goals Achieved', value: '100%', color: 'text-pink-400' },
   ];
@@ -15,7 +15,6 @@ const About = () => {
   const achievements = [
     "🏆 B.Tech in AI & ML with 8.25 CGPA",
     "🚀 Developer Intern at Lab of Future",
-    "💡 Built AI-powered applications",
     "🎯 5 Star Gold Badge in C++ (HackerRank)",
     "🥇 First place in 'Talos 3.0' competition",
     "📜 Multiple industry certifications"
@@ -121,7 +120,7 @@ const About = () => {
           transition={{ duration: 0.8 }}
           className="mb-16"
         >
-          <h3 className="text-2xl font-bold text-center text-white mb-8">Education</h3>
+          <h3 className="text-4xl font-bold text-center text-white mb-8">Education</h3>
           <div className="grid md:grid-cols-3 gap-6">
             <div className="bg-gradient-to-r from-purple-900/20 to-cyan-900/20 p-6 rounded-xl border border-purple-500/20">
               <h4 className="text-lg font-semibold text-purple-400 mb-2">B.Tech - AI & ML</h4>
@@ -133,13 +132,13 @@ const About = () => {
               <h4 className="text-lg font-semibold text-cyan-400 mb-2">HSC (PCB)</h4>
               <p className="text-white font-medium">Velammal Vidhyashram Surapet</p>
               <p className="text-gray-400 text-sm">Mar 2020 - May 2021</p>
-              <p className="text-green-400 font-semibold">82.60%</p>
+              <p className="text-green-400 font-semibold">Percentage: 82.60%</p>
             </div>
             <div className="bg-gradient-to-r from-green-900/20 to-purple-900/20 p-6 rounded-xl border border-green-500/20">
               <h4 className="text-lg font-semibold text-green-400 mb-2">SSLC</h4>
               <p className="text-white font-medium">Velammal Vidhyashram Surapet</p>
               <p className="text-gray-400 text-sm">Mar 2018 - May 2019</p>
-              <p className="text-purple-400 font-semibold">83.20%</p>
+              <p className="text-purple-400 font-semibold">Percentage: 83.20%</p>
             </div>
           </div>
         </motion.div>
@@ -156,7 +155,7 @@ const About = () => {
           <p className="text-gray-300 text-lg max-w-4xl mx-auto">
             "I believe in building applications that not only solve problems but also enhance user experience. 
             Every line of code should serve a purpose, and every solution should be scalable and maintainable. 
-            My goal is to bridge the gap between artificial intelligence and practical applications that make a real difference."
+            My goal is to bridge the gap between Artificial Intelligence and practical applications that make a real difference."
           </p>
         </motion.div>
       </div>

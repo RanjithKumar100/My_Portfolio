@@ -7,7 +7,7 @@ const Experience = () => {
     {
       title: 'Developer Intern',
       company: 'Lab of Future (LOF)',
-      location: 'Remote',
+      location: 'Chennai',
       period: 'Current',
       description: [
         'Currently working as a Developer at Lab of Future, contributing to real-world AI solutions',
@@ -70,11 +70,6 @@ const Experience = () => {
       description: 'Won first place in "Talos 3.0" (Cognitive Clues) at CIT college',
       type: 'Competition'
     },
-    {
-      title: 'Precise Energy 2022',
-      description: 'Participated in Olympiad and reached final stage',
-      type: 'Competition'
-    }
   ];
 
   return (

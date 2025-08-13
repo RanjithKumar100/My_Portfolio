@@ -58,13 +58,13 @@ const Hero = () => {
             transition={{ delay: 0.3, duration: 0.5 }}
           >
             <div className="relative">
-              <Sparkles className="text-purple-400 w-8 h-8" />
+              <Sparkles className="text-purple-400 w-10 h-10" />
               <motion.div
                 className="absolute inset-0"
                 animate={{ rotate: 360 }}
                 transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
               >
-                <Sparkles className="text-cyan-400 w-8 h-8" />
+                <Sparkles className="text-cyan-400 w-10 h-10" />
               </motion.div>
             </div>
           </motion.div>

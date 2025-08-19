@@ -6,14 +6,14 @@ const Projects = () => {
   const [filter, setFilter] = useState('all');
   
   const projects = [
+    // === FEATURED AI/ML PROJECTS ===
     {
       title: 'DeepClassify - Object Classification',
       description: 'A computer vision-based detection system designed for traffic lights to count vehicles and solve real-time problems of accidents and theft. Built using advanced Computer Vision and Machine Learning algorithms for accurate vehicle detection and classification.',
-      image: 'https://images.pexels.com/photos/2882552/pexels-photo-2882552.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: 'deepclassify.png',
       technologies: ['Python', 'Computer Vision', 'Machine Learning', 'OpenCV', 'TensorFlow'],
       github: 'https://github.com/RanjithKumar100/Object_Detection_CV',
-      demo: 'https://demo-link.com',
-      featured: true,
+      featured: false,
       category: 'ai-ml',
       date: '2024',
       status: 'completed',
@@ -26,9 +26,9 @@ const Projects = () => {
       technologies: ['Python', 'NLP', 'GenAI', 'FAISS', 'PDF Processing', 'Vector Search'],
       github: 'https://github.com/RanjithKumar100/Q-A-ChatBot-For-Documentation',
       demo: 'https://demo-link.com',
-      featured: true,
+      featured: false,
       category: 'ai-ml',
-      date: '2024', 
+      date: '2024',
       status: 'completed',
       icon: Bot
     },
@@ -39,7 +39,7 @@ const Projects = () => {
       technologies: ['Python', 'CNN', 'Reinforcement Learning', 'Cybersecurity', 'N-BaIoT Dataset'],
       github: 'https://github.com/RanjithKumar100',
       demo: 'https://demo-link.com',
-      featured: true,
+      featured: false,
       category: 'ai-ml',
       date: '2024',
       status: 'completed',
@@ -58,6 +58,7 @@ const Projects = () => {
       status: 'in-progress',
       icon: Bot
     },
+    // === WEB DEVELOPMENT PROJECTS ===
     {
       title: 'Portfolio Website',
       description: 'A modern, responsive portfolio website built with React and advanced animations. Features smooth scrolling, interactive elements, and a clean design to showcase projects and skills effectively.',
@@ -71,6 +72,8 @@ const Projects = () => {
       status: 'completed',
       icon: Brain
     },
+
+    // === PROGRAMMING & ALGORITHMS ===
     {
       title: 'Data Structures & Algorithms',
       description: 'Comprehensive implementation of various data structures and algorithms in C++ and Python. Includes sorting algorithms, graph algorithms, dynamic programming solutions, and competitive programming solutions.',
@@ -252,15 +255,6 @@ const Projects = () => {
                     >
                       <Github size={16} />
                       <span className="text-sm">Code</span>
-                    </a>
-                    <a
-                      href={project.demo}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-2 text-gray-400 hover:text-cyan-400 transition-colors"
-                    >
-                      <Eye size={16} />
-                      <span className="text-sm">Demo</span>
                     </a>
                   </div>
                 </div>

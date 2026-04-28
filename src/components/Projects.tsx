@@ -114,10 +114,7 @@ const Projects = () => {
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             Featured <span className="gradient-text">Projects</span>
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-purple-500 via-cyan-500 to-green-500 mx-auto mb-8"></div>
-          <p className="text-gray-400 text-lg max-w-3xl mx-auto">
-            Here are some of my key projects that showcase my expertise in AI/ML, web development, and problem-solving
-          </p>
+          <div className="w-24 h-1 bg-gradient-to-r from-primary-500 via-primary-600 to-accent-600 mx-auto"></div>
         </motion.div>
 
         {/* Filter Buttons */}
@@ -132,17 +129,17 @@ const Projects = () => {
             <motion.button
               key={category.id}
               onClick={() => setFilter(category.id)}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+              whileHover={{ scale: 1.03 }}
+              whileTap={{ scale: 0.97 }}
               className={`flex items-center gap-2 px-6 py-3 rounded-lg transition-all ${
                 filter === category.id
-                  ? 'bg-gradient-to-r from-purple-600 to-cyan-600 text-white'
-                  : 'bg-gray-800 text-gray-300 hover:bg-gray-700'
+                  ? 'bg-gradient-to-r from-primary-600 to-primary-700 text-white'
+                  : 'bg-secondary-800 text-secondary-300 hover:bg-secondary-700'
               }`}
             >
               <Filter size={16} />
               {category.label}
-              <span className="bg-gray-700 px-2 py-1 rounded-full text-xs">
+              <span className="bg-secondary-700 px-2 py-1 rounded-full text-xs">
                 {category.count}
               </span>
             </motion.button>
@@ -165,8 +162,8 @@ const Projects = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                whileHover={{ y: -8 }}
-                className={`project-card bg-gray-900/50 rounded-xl overflow-hidden transition-all duration-300 ${
+                whileHover={{ y: -5 }}
+                className={`project-card bg-secondary-900/50 rounded-xl overflow-hidden transition-all duration-300 ${
                   project.featured ? 'lg:col-span-2' : ''
                 }`}
               >
@@ -176,14 +173,14 @@ const Projects = () => {
                     alt={project.title}
                     className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-4">
+                  <div className="absolute inset-0 bg-gradient-to-t from-secondary-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-4">
                     <div className="flex gap-3">
                       <motion.a
                         href={project.github}
                         target="_blank"
                         rel="noopener noreferrer"
                         whileHover={{ scale: 1.1 }}
-                        className="p-2 bg-gray-800/80 rounded-full text-white hover:text-purple-400 transition-colors"
+                        className="p-2 bg-secondary-800/80 rounded-full text-white hover:text-primary-400 transition-colors"
                       >
                         <Github size={20} />
                       </motion.a>
@@ -192,19 +189,19 @@ const Projects = () => {
                         target="_blank"
                         rel="noopener noreferrer"
                         whileHover={{ scale: 1.1 }}
-                        className="p-2 bg-gray-800/80 rounded-full text-white hover:text-cyan-400 transition-colors"
+                        className="p-2 bg-secondary-800/80 rounded-full text-white hover:text-primary-500 transition-colors"
                       >
                         <ExternalLink size={20} />
                       </motion.a>
                     </div>
                   </div>
-                  
+
                   {/* Status Badge */}
                   <div className="absolute top-4 right-4">
                     <span className={`px-2 py-1 rounded-full text-xs font-semibold ${
-                      project.status === 'completed' 
-                        ? 'bg-green-600/20 text-green-300 border border-green-600/30'
-                        : 'bg-yellow-600/20 text-yellow-300 border border-yellow-600/30'
+                      project.status === 'completed'
+                        ? 'bg-primary-600/20 text-primary-300 border border-primary-600/30'
+                        : 'bg-accent-600/20 text-accent-300 border border-accent-600/30'
                     }`}>
                       {project.status === 'completed' ? 'Completed' : 'In Progress'}
                     </span>
@@ -212,8 +209,8 @@ const Projects = () => {
 
                   {/* Project Icon */}
                   <div className="absolute top-4 left-4">
-                    <div className="p-2 bg-gray-800/80 rounded-full">
-                      <project.icon size={20} className="text-purple-400" />
+                    <div className="p-2 bg-secondary-800/80 rounded-full">
+                      <project.icon size={20} className="text-primary-400" />
                     </div>
                   </div>
                 </div>
@@ -223,23 +220,23 @@ const Projects = () => {
                     <h3 className="text-xl font-bold text-white">{project.title}</h3>
                     <div className="flex items-center gap-2">
                       {project.featured && (
-                        <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                        <Star className="w-4 h-4 text-accent-400 fill-current" />
                       )}
-                      <div className="flex items-center gap-1 text-gray-400 text-sm">
+                      <div className="flex items-center gap-1 text-secondary-400 text-sm">
                         <Calendar size={14} />
                         {project.date}
                       </div>
                     </div>
                   </div>
 
-                  <p className="text-gray-400 mb-4 leading-relaxed">{project.description}</p>
+                  <p className="text-secondary-400 mb-4 leading-relaxed">{project.description}</p>
 
                   <div className="flex flex-wrap gap-2 mb-4">
                     {project.technologies.map((tech, idx) => (
                       <motion.span
                         key={idx}
                         whileHover={{ scale: 1.05 }}
-                        className="px-2 py-1 bg-gradient-to-r from-purple-600/20 to-cyan-600/20 text-purple-300 rounded text-sm border border-purple-600/30"
+                        className="px-2 py-1 bg-gradient-to-r from-primary-600/20 to-primary-700/20 text-primary-300 rounded text-sm border border-primary-600/30"
                       >
                         {tech}
                       </motion.span>
@@ -251,7 +248,7 @@ const Projects = () => {
                       href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors"
+                      className="flex items-center gap-2 text-secondary-400 hover:text-white transition-colors"
                     >
                       <Github size={16} />
                       <span className="text-sm">Code</span>
@@ -272,10 +269,10 @@ const Projects = () => {
           className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6"
         >
           {[
-            { label: 'Total Projects', value: '10+', color: 'text-purple-400' },
-            { label: 'AI/ML Projects', value: '4+', color: 'text-cyan-400' },
-            { label: 'Technologies Used', value: '15+', color: 'text-green-400' },
-            { label: 'Code Commits', value: '500+', color: 'text-yellow-400' }
+            { label: 'Total Projects', value: '10+', color: 'text-primary-400' },
+            { label: 'AI/ML Projects', value: '4+', color: 'text-primary-500' },
+            { label: 'Technologies Used', value: '15+', color: 'text-accent-500' },
+            { label: 'Code Commits', value: '500+', color: 'text-accent-600' }
           ].map((stat, index) => (
             <motion.div
               key={stat.label}
@@ -283,10 +280,10 @@ const Projects = () => {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="text-center p-6 bg-gray-900/30 rounded-xl border border-purple-500/20"
+              className="text-center p-6 bg-secondary-900/30 rounded-xl border border-primary-500/20"
             >
               <div className={`text-3xl font-bold ${stat.color} mb-2`}>{stat.value}</div>
-              <div className="text-gray-400 text-sm">{stat.label}</div>
+              <div className="text-secondary-400 text-sm">{stat.label}</div>
             </motion.div>
           ))}
         </motion.div>

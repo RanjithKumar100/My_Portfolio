@@ -37,28 +37,28 @@ const Contact = () => {
       label: 'Email',
       value: 'ranjithsivakumar2004@gmail.com',
       href: 'mailto:ranjithsivakumar2004@gmail.com',
-      color: 'text-purple-400'
+      color: 'text-primary-400'
     },
     {
       icon: Phone,
       label: 'Phone',
       value: '+91 9150654888',
       href: 'tel:+919150654888',
-      color: 'text-cyan-400'
+      color: 'text-primary-500'
     },
     {
       icon: MapPin,
       label: 'Location',
       value: 'Chennai, Tamil Nadu, India',
       href: null,
-      color: 'text-green-400'
+      color: 'text-accent-500'
     },
     {
       icon: Calendar,
       label: 'Availability',
       value: 'Open to opportunities',
       href: null,
-      color: 'text-yellow-400'
+      color: 'text-accent-600'
     }
   ];
 
@@ -67,27 +67,27 @@ const Contact = () => {
       icon: Github,
       label: 'GitHub',
       href: 'https://github.com/RanjithKumar100',
-      color: 'hover:text-gray-400',
-      bgColor: 'hover:bg-gray-700'
+      color: 'hover:text-primary-400',
+      bgColor: 'hover:bg-primary-700'
     },
     {
       icon: Linkedin,
       label: 'LinkedIn',
       href: 'https://www.linkedin.com/in/ranjithkumar5101/',
-      color: 'hover:text-blue-400',
-      bgColor: 'hover:bg-blue-700'
+      color: 'hover:text-primary-500',
+      bgColor: 'hover:bg-primary-700'
     },
     {
       icon: MessageCircle,
       label: 'WhatsApp',
       href: 'https://wa.me/919150654888',
-      color: 'hover:text-green-400',
-      bgColor: 'hover:bg-green-700'
+      color: 'hover:text-accent-500',
+      bgColor: 'hover:bg-accent-700'
     }
   ];
 
   return (
-    <section id="contact" className="section-padding bg-gray-800/30 relative overflow-hidden">
+    <section id="contact" className="section-padding bg-secondary-800/30 relative overflow-hidden">
       <div className="particle-bg"></div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
@@ -100,9 +100,9 @@ const Contact = () => {
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             Get In <span className="gradient-text">Touch</span>
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-purple-500 via-cyan-500 to-green-500 mx-auto mb-8"></div>
-          <p className="text-gray-400 text-lg max-w-3xl mx-auto">
-            I'm always interested in hearing about new opportunities and exciting projects. 
+          <div className="w-24 h-1 bg-gradient-to-r from-primary-500 via-primary-600 to-accent-600 mx-auto mb-8"></div>
+          <p className="text-secondary-400 text-lg max-w-3xl mx-auto">
+            I'm always interested in hearing about new opportunities and exciting projects.
             Let's discuss how we can work together to bring innovative ideas to life!
           </p>
         </motion.div>
@@ -125,18 +125,18 @@ const Contact = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
-                  whileHover={{ x: 10 }}
-                  className="flex items-center gap-4 p-4 bg-gray-900/30 rounded-lg border border-purple-500/20 hover:border-purple-500/50 transition-all"
+                  whileHover={{ x: 6 }}
+                  className="flex items-center gap-4 p-4 bg-secondary-900/30 rounded-lg border border-primary-500/20 hover:border-primary-500/50 transition-all"
                 >
-                  <div className={`p-3 bg-gradient-to-r from-purple-600/20 to-cyan-600/20 rounded-lg`}>
+                  <div className={`p-3 bg-gradient-to-r from-primary-600/20 to-primary-700/20 rounded-lg`}>
                     <info.icon size={24} className={info.color} />
                   </div>
                   <div>
-                    <p className="text-gray-400 text-sm">{info.label}</p>
+                    <p className="text-secondary-400 text-sm">{info.label}</p>
                     {info.href ? (
                       <a
                         href={info.href}
-                        className="text-white hover:text-purple-400 transition-colors font-medium"
+                        className="text-white hover:text-primary-400 transition-colors font-medium"
                       >
                         {info.value}
                       </a>
@@ -161,8 +161,8 @@ const Contact = () => {
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
                     transition={{ delay: index * 0.1 }}
-                    whileHover={{ scale: 1.2, rotate: 360 }}
-                    className={`p-4 bg-gray-700 rounded-lg text-gray-400 ${social.color} ${social.bgColor} transition-all glow-effect`}
+                    whileHover={{ scale: 1.15, rotate: 360 }}
+                    className={`p-4 bg-secondary-700 rounded-lg text-secondary-400 ${social.color} ${social.bgColor} transition-all glow-effect`}
                   >
                     <social.icon size={24} />
                   </motion.a>
@@ -186,7 +186,7 @@ const Contact = () => {
                   viewport={{ once: true }}
                   transition={{ delay: 0.1 }}
                 >
-                  <label htmlFor="name" className="block text-gray-300 mb-2 font-medium">
+                  <label htmlFor="name" className="block text-secondary-300 mb-2 font-medium">
                     Name *
                   </label>
                   <input
@@ -196,7 +196,7 @@ const Contact = () => {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-purple-400 focus:ring-2 focus:ring-purple-400/20 transition-all"
+                    className="w-full px-4 py-3 bg-secondary-700/50 border border-secondary-600 rounded-lg text-white placeholder-secondary-400 focus:outline-none focus:border-primary-400 focus:ring-2 focus:ring-primary-400/20 transition-all"
                     placeholder="Your name"
                   />
                 </motion.div>
@@ -206,7 +206,7 @@ const Contact = () => {
                   viewport={{ once: true }}
                   transition={{ delay: 0.2 }}
                 >
-                  <label htmlFor="email" className="block text-gray-300 mb-2 font-medium">
+                  <label htmlFor="email" className="block text-secondary-300 mb-2 font-medium">
                     Email *
                   </label>
                   <input
@@ -216,7 +216,7 @@ const Contact = () => {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-purple-400 focus:ring-2 focus:ring-purple-400/20 transition-all"
+                    className="w-full px-4 py-3 bg-secondary-700/50 border border-secondary-600 rounded-lg text-white placeholder-secondary-400 focus:outline-none focus:border-primary-400 focus:ring-2 focus:ring-primary-400/20 transition-all"
                     placeholder="your.email@example.com"
                   />
                 </motion.div>
@@ -228,7 +228,7 @@ const Contact = () => {
                 viewport={{ once: true }}
                 transition={{ delay: 0.3 }}
               >
-                <label htmlFor="subject" className="block text-gray-300 mb-2 font-medium">
+                <label htmlFor="subject" className="block text-secondary-300 mb-2 font-medium">
                   Subject *
                 </label>
                 <input
@@ -238,7 +238,7 @@ const Contact = () => {
                   value={formData.subject}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-purple-400 focus:ring-2 focus:ring-purple-400/20 transition-all"
+                  className="w-full px-4 py-3 bg-secondary-700/50 border border-secondary-600 rounded-lg text-white placeholder-secondary-400 focus:outline-none focus:border-primary-400 focus:ring-2 focus:ring-primary-400/20 transition-all"
                   placeholder="What's this about?"
                 />
               </motion.div>
@@ -249,7 +249,7 @@ const Contact = () => {
                 viewport={{ once: true }}
                 transition={{ delay: 0.4 }}
               >
-                <label htmlFor="message" className="block text-gray-300 mb-2 font-medium">
+                <label htmlFor="message" className="block text-secondary-300 mb-2 font-medium">
                   Message *
                 </label>
                 <textarea
@@ -259,7 +259,7 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                   rows={6}
-                  className="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-purple-400 focus:ring-2 focus:ring-purple-400/20 transition-all resize-none"
+                  className="w-full px-4 py-3 bg-secondary-700/50 border border-secondary-600 rounded-lg text-white placeholder-secondary-400 focus:outline-none focus:border-primary-400 focus:ring-2 focus:ring-primary-400/20 transition-all resize-none"
                   placeholder="Tell me about your project or just say hello!"
                 />
               </motion.div>
@@ -273,7 +273,7 @@ const Contact = () => {
                 transition={{ delay: 0.5 }}
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 disabled:from-gray-600 disabled:to-gray-700 text-white py-3 px-6 rounded-lg transition-all font-semibold glow-effect"
+                className="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-700 hover:to-primary-800 disabled:from-secondary-600 disabled:to-secondary-700 text-white py-3 px-6 rounded-lg transition-all font-semibold glow-effect"
               >
                 {isSubmitting ? (
                   <>
@@ -301,17 +301,17 @@ const Contact = () => {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.5 }}
-          className="text-center mt-16 pt-8 border-t border-purple-500/20"
+          className="text-center mt-16 pt-8 border-t border-primary-500/20"
         >
-          <p className="text-gray-400 mb-4">
+          <p className="text-secondary-400 mb-4">
             © 2025 Ranjith Kumar. Built with React, TypeScript & Tailwind CSS.
           </p>
-          <div className="flex justify-center items-center gap-2 text-gray-500">
+          <div className="flex justify-center items-center gap-2 text-secondary-500">
             <span></span>
             <motion.span
               animate={{ scale: [1, 1.2, 1] }}
               transition={{ duration: 1, repeat: Infinity }}
-              className="text-red-500"
+              className="text-accent-500"
             >
             </motion.span>
             <span></span>

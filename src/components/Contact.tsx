@@ -40,15 +40,24 @@ const Contact = () => {
         from_email: formData.email,
         subject: formData.subject,
         message: formData.message,
-        to_email: 'ranjithsivakumar2004@gmail.com'
+        to_name: 'Ranjith Kumar',
+        reply_to: formData.email
       };
 
-      await emailjs.send(serviceId, templateId, templateParams, publicKey);
+      console.log('Sending email with params:', templateParams);
 
+      const response = await emailjs.send(serviceId, templateId, templateParams, publicKey);
+
+      console.log('Email sent successfully:', response);
       setSubmitStatus('success');
       setFormData({ name: '', email: '', subject: '', message: '' });
-    } catch (error) {
+    } catch (error: any) {
       console.error('Email send error:', error);
+      console.error('Error details:', {
+        message: error.message,
+        text: error.text,
+        status: error.status
+      });
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);

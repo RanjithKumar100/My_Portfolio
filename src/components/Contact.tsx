@@ -21,10 +21,19 @@ const Contact = () => {
 
     try {
       // EmailJS configuration
-      // You need to replace these with your actual EmailJS credentials
-      const serviceId = 'YOUR_SERVICE_ID';
-      const templateId = 'YOUR_TEMPLATE_ID';
-      const publicKey = 'YOUR_PUBLIC_KEY';
+      // Replace these with your actual EmailJS credentials from https://www.emailjs.com/
+      const serviceId = 'service_20skjxj';
+      const templateId = 'template_a9ib28f';
+      const publicKey = 'HgrJ-3eiYPWOiB_xd';
+
+      // Check if credentials are configured
+      if (serviceId.includes('YOUR_') || templateId.includes('YOUR_') || publicKey.includes('YOUR_')) {
+        console.error('EmailJS credentials not configured. Please update Contact.tsx with your credentials.');
+        setSubmitStatus('error');
+        setIsSubmitting(false);
+        setTimeout(() => setSubmitStatus(null), 5000);
+        return;
+      }
 
       const templateParams = {
         from_name: formData.name,

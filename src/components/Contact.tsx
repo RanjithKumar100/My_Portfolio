@@ -40,24 +40,15 @@ const Contact = () => {
         from_email: formData.email,
         subject: formData.subject,
         message: formData.message,
-        to_name: 'Ranjith Kumar',
-        reply_to: formData.email
+        to_email: 'ranjithsivakumar2004@gmail.com'
       };
 
-      console.log('Sending email with params:', templateParams);
+      await emailjs.send(serviceId, templateId, templateParams, publicKey);
 
-      const response = await emailjs.send(serviceId, templateId, templateParams, publicKey);
-
-      console.log('Email sent successfully:', response);
       setSubmitStatus('success');
       setFormData({ name: '', email: '', subject: '', message: '' });
-    } catch (error: any) {
+    } catch (error) {
       console.error('Email send error:', error);
-      console.error('Error details:', {
-        message: error.message,
-        text: error.text,
-        status: error.status
-      });
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);
@@ -143,6 +134,10 @@ const Contact = () => {
             Get In <span className="gradient-text">Touch</span>
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-primary-500 via-primary-600 to-accent-600 mx-auto mb-8"></div>
+          <p className="text-secondary-400 text-lg max-w-3xl mx-auto">
+            I'm always interested in hearing about new opportunities and exciting projects.
+            Let's discuss how we can work together to bring innovative ideas to life!
+          </p>
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-12">
@@ -154,7 +149,7 @@ const Contact = () => {
             transition={{ duration: 0.8 }}
           >
             <h3 className="text-2xl font-bold text-white mb-8">Let's Connect</h3>
-            
+
             <div className="space-y-6 mb-8">
               {contactInfo.map((info, index) => (
                 <motion.div

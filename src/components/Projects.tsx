@@ -23,8 +23,7 @@ const Projects = () => {
       technologies: ['Python', 'NLP', 'GenAI', 'FAISS'],
       github: 'https://github.com/RanjithKumar100/Q-A-ChatBot-For-Documentation',
       demo: 'https://demo-link.com',
-      featured: false,
-      category: 'ai-ml',
+      featured: false,      
       date: '2024',
       status: 'completed',
       icon: Bot
@@ -37,7 +36,6 @@ const Projects = () => {
       github: 'https://github.com/RanjithKumar100',
       demo: 'https://demo-link.com',
       featured: false,
-      category: 'ai-ml',
       date: '2024',
       status: 'completed',
       icon: Shield
@@ -50,7 +48,6 @@ const Projects = () => {
       github: 'https://github.com/RanjithKumar100/LOF_Agent',
       demo: 'https://demo-link.com',
       featured: false,
-      category: 'ai-ml',
       date: '2025',
       status: 'in-progress',
       icon: Bot
@@ -64,7 +61,6 @@ const Projects = () => {
       github: 'https://github.com/RanjithKumar100/Personal_Portfolio',
       demo: 'https://demo-link.com',
       featured: false,
-      category: 'web',
       date: '2025',
       status: 'completed',
       icon: Brain
@@ -79,7 +75,6 @@ const Projects = () => {
       github: 'https://github.com/RanjithKumar100/Coding-Problems',
       demo: 'https://demo-link.com',
       featured: false,
-      category: 'programming',
       date: '2023-2024',
       status: 'completed',
       icon: Brain

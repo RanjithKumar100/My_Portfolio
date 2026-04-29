@@ -36,7 +36,7 @@ const About = () => {
               <div className="relative bg-gradient-to-br from-secondary-900 to-secondary-950 rounded-3xl overflow-hidden border-4 border-primary-500/50 group-hover:border-primary-400 shadow-2xl group-hover:shadow-[0_0_40px_rgba(14,165,233,0.5)] h-full transition-all duration-500">
                 {/* Your Photo */}
                 <img
-                  src="/Personal_Portfolio/photo mine.PNG"
+                  src="/Personal_Portfolio/photonew.png"
                   alt="Ranjith Kumar"
                   className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-110"
                   style={{ objectPosition: 'center' }}

@@ -1,29 +1,26 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { ExternalLink, Github, Eye, Filter, Star, Calendar, Brain, Shield, Bot } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { ExternalLink, Github, Star, Calendar, Brain, Shield, Bot } from 'lucide-react';
 
 const Projects = () => {
-  const [filter, setFilter] = useState('all');
   
   const projects = [
     // === FEATURED AI/ML PROJECTS ===
     {
       title: 'DeepClassify - Object Classification',
-      description: 'A computer vision-based detection system designed for traffic lights to count vehicles and solve real-time problems of accidents and theft. Built using advanced Computer Vision and Machine Learning algorithms for accurate vehicle detection and classification.',
+      description: 'AI-powered traffic system for real-time vehicle counting and detection using computer vision and machine learning.',
       image: 'deepclassify.png',
-      technologies: ['Python', 'Computer Vision', 'Machine Learning', 'OpenCV', 'TensorFlow'],
+      technologies: ['Python', 'Computer Vision', 'Machine Learning', 'OpenCV'],
       github: 'https://github.com/RanjithKumar100/Object_Detection_CV',
       featured: false,
-      category: 'ai-ml',
       date: '2024',
       status: 'completed',
       icon: Brain
     },
     {
       title: 'PharmaAssist - Q&A Chatbot',
-      description: 'An AI-powered PDF chatbot that extracts and processes information from uploaded documents using NLP and Generative AI. Integrated FAISS for vector-based search to provide accurate, context-aware responses with citations, enabling efficient document interaction.',
+      description: 'AI-powered PDF chatbot that uses NLP and Generative AI with FAISS for fast, context-aware document search and accurate, citation-based responses.',
       image: 'https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=800',
-      technologies: ['Python', 'NLP', 'GenAI', 'FAISS', 'PDF Processing', 'Vector Search'],
+      technologies: ['Python', 'NLP', 'GenAI', 'FAISS'],
       github: 'https://github.com/RanjithKumar100/Q-A-ChatBot-For-Documentation',
       demo: 'https://demo-link.com',
       featured: false,
@@ -34,9 +31,9 @@ const Projects = () => {
     },
     {
       title: 'SecureNet - IoT Botnet Detection',
-      description: 'A hybrid detection model combining Convolutional Neural Networks (CNN) for feature extraction and Reinforcement Learning (RL) for adaptive optimization. Leveraged the N-BaIoT dataset to identify anomalous network traffic with high accuracy.',
-      image: 'https://images.pexels.com/photos/60504/security-protection-anti-virus-software-60504.jpeg?auto=compress&cs=tinysrgb&w=800',
-      technologies: ['Python', 'CNN', 'Reinforcement Learning', 'Cybersecurity', 'N-BaIoT Dataset'],
+      description: 'Hybrid CNN and RL model for detecting anomalous network traffic using the N-BaIoT dataset with high accuracy.',
+      image: '/Personal_Portfolio/projects/securenet.png',
+      technologies: ['Python', 'CNN', 'Reinforcement Learning','N-BaIoT Dataset'],
       github: 'https://github.com/RanjithKumar100',
       demo: 'https://demo-link.com',
       featured: false,
@@ -47,7 +44,7 @@ const Projects = () => {
     },
     {
       title: 'LOF_Agent - AI Chatbot',
-      description: 'Currently developing an intelligent chatbot for Lab of Future website as part of my internship. The project leverages Natural Language Processing and AI to enhance user interaction and provide intelligent responses.',
+      description: 'Developing an AI-powered chatbot using NLP to enhance user interaction and deliver intelligent responses for the Lab of Future website.',
       image: 'https://images.pexels.com/photos/8386434/pexels-photo-8386434.jpeg?auto=compress&cs=tinysrgb&w=800',
       technologies: ['Python', 'NLP', 'AI', 'Chatbot Development', 'Web Integration'],
       github: 'https://github.com/RanjithKumar100/LOF_Agent',
@@ -60,9 +57,9 @@ const Projects = () => {
     },
     // === WEB DEVELOPMENT PROJECTS ===
     {
-      title: 'Portfolio Website',
-      description: 'A modern, responsive portfolio website built with React and advanced animations. Features smooth scrolling, interactive elements, and a clean design to showcase projects and skills effectively.',
-      image: 'https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=800',
+      title: 'TimeWise',
+      description: 'TimeWise CRM is a full-stack time management system built with Next.js and MongoDB, featuring time tracking, role-based access, analytics, secure authentication, leave management, and real-time monitoring with a modern UI.',
+      image: '/Personal_Portfolio/projects/Timewise.png',
       technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'Responsive Design'],
       github: 'https://github.com/RanjithKumar100/Personal_Portfolio',
       demo: 'https://demo-link.com',
@@ -89,17 +86,6 @@ const Projects = () => {
     }
   ];
 
-  const categories = [
-    { id: 'all', label: 'All Projects', count: projects.length },
-    { id: 'ai-ml', label: 'AI/ML', count: projects.filter(p => p.category === 'ai-ml').length },
-    { id: 'web', label: 'Web Dev', count: projects.filter(p => p.category === 'web').length },
-    { id: 'programming', label: 'Programming', count: projects.filter(p => p.category === 'programming').length },
-  ];
-
-  const filteredProjects = filter === 'all' 
-    ? projects 
-    : projects.filter(project => project.category === filter);
-
   return (
     <section id="projects" className="section-padding relative overflow-hidden">
       <div className="particle-bg"></div>
@@ -117,45 +103,14 @@ const Projects = () => {
           <div className="w-24 h-1 bg-gradient-to-r from-primary-500 via-primary-600 to-accent-600 mx-auto"></div>
         </motion.div>
 
-        {/* Filter Buttons */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="flex flex-wrap justify-center gap-4 mb-12"
+          transition={{ duration: 0.5 }}
+          className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
         >
-          {categories.map((category) => (
-            <motion.button
-              key={category.id}
-              onClick={() => setFilter(category.id)}
-              whileHover={{ scale: 1.03 }}
-              whileTap={{ scale: 0.97 }}
-              className={`flex items-center gap-2 px-6 py-3 rounded-lg transition-all ${
-                filter === category.id
-                  ? 'bg-gradient-to-r from-primary-600 to-primary-700 text-white'
-                  : 'bg-secondary-800 text-secondary-300 hover:bg-secondary-700'
-              }`}
-            >
-              <Filter size={16} />
-              {category.label}
-              <span className="bg-secondary-700 px-2 py-1 rounded-full text-xs">
-                {category.count}
-              </span>
-            </motion.button>
-          ))}
-        </motion.div>
-
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={filter}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.5 }}
-            className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
-          >
-            {filteredProjects.map((project, index) => (
+            {projects.map((project, index) => (
               <motion.div
                 key={project.title}
                 initial={{ opacity: 0, y: 50 }}
@@ -163,15 +118,15 @@ const Projects = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 whileHover={{ y: -5 }}
-                className={`project-card bg-secondary-900/50 rounded-xl overflow-hidden transition-all duration-300 ${
+                className={`project-card bg-secondary-900/50 rounded-xl overflow-hidden transition-all duration-300 flex flex-col h-full ${
                   project.featured ? 'lg:col-span-2' : ''
                 }`}
               >
-                <div className="relative overflow-hidden group">
+                <div className="relative overflow-hidden group h-48 flex-shrink-0">
                   <img
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110"
+                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-secondary-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-4">
                     <div className="flex gap-3">
@@ -184,21 +139,23 @@ const Projects = () => {
                       >
                         <Github size={20} />
                       </motion.a>
-                      <motion.a
-                        href={project.demo}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        whileHover={{ scale: 1.1 }}
-                        className="p-2 bg-secondary-800/80 rounded-full text-white hover:text-primary-500 transition-colors"
-                      >
-                        <ExternalLink size={20} />
-                      </motion.a>
+                      {project.demo && (
+                        <motion.a
+                          href={project.demo}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          whileHover={{ scale: 1.1 }}
+                          className="p-2 bg-secondary-800/80 rounded-full text-white hover:text-primary-500 transition-colors"
+                        >
+                          <ExternalLink size={20} />
+                        </motion.a>
+                      )}
                     </div>
                   </div>
 
                   {/* Status Badge */}
                   <div className="absolute top-4 right-4">
-                    <span className={`px-2 py-1 rounded-full text-xs font-semibold ${
+                    <span className={`px-3 py-1 rounded-full text-xs font-semibold ${
                       project.status === 'completed'
                         ? 'bg-primary-600/20 text-primary-300 border border-primary-600/30'
                         : 'bg-accent-600/20 text-accent-300 border border-accent-600/30'
@@ -209,83 +166,54 @@ const Projects = () => {
 
                   {/* Project Icon */}
                   <div className="absolute top-4 left-4">
-                    <div className="p-2 bg-secondary-800/80 rounded-full">
+                    <div className="p-2 bg-secondary-800/80 backdrop-blur-sm rounded-full">
                       <project.icon size={20} className="text-primary-400" />
                     </div>
                   </div>
                 </div>
 
-                <div className="p-6">
-                  <div className="flex items-center justify-between mb-3">
-                    <h3 className="text-xl font-bold text-white">{project.title}</h3>
-                    <div className="flex items-center gap-2">
+                <div className="p-6 flex flex-col flex-grow">
+                  <div className="flex items-start justify-between mb-3 gap-3">
+                    <h3 className="text-xl font-bold text-white flex-grow">{project.title}</h3>
+                    <div className="flex items-center gap-2 flex-shrink-0">
                       {project.featured && (
                         <Star className="w-4 h-4 text-accent-400 fill-current" />
                       )}
-                      <div className="flex items-center gap-1 text-secondary-400 text-sm">
+                      <div className="flex items-center gap-1 text-secondary-400 text-sm whitespace-nowrap">
                         <Calendar size={14} />
                         {project.date}
                       </div>
                     </div>
                   </div>
 
-                  <p className="text-secondary-400 mb-4 leading-relaxed">{project.description}</p>
+                  <p className="text-secondary-400 mb-4 leading-relaxed text-sm">{project.description}</p>
 
                   <div className="flex flex-wrap gap-2 mb-4">
                     {project.technologies.map((tech, idx) => (
                       <motion.span
                         key={idx}
                         whileHover={{ scale: 1.05 }}
-                        className="px-2 py-1 bg-gradient-to-r from-primary-600/20 to-primary-700/20 text-primary-300 rounded text-sm border border-primary-600/30"
+                        className="px-3 py-1 bg-gradient-to-r from-primary-600/20 to-primary-700/20 text-primary-300 rounded-md text-xs border border-primary-600/30 font-medium"
                       >
                         {tech}
                       </motion.span>
                     ))}
                   </div>
 
-                  <div className="flex gap-3">
+                  <div className="flex gap-3 mt-auto pt-4 border-t border-secondary-800/50">
                     <a
                       href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 text-secondary-400 hover:text-white transition-colors"
+                      className="flex items-center gap-2 text-secondary-400 hover:text-primary-400 transition-colors"
                     >
                       <Github size={16} />
-                      <span className="text-sm">Code</span>
+                      <span className="text-sm font-medium">View Code</span>
                     </a>
                   </div>
                 </div>
               </motion.div>
             ))}
-          </motion.div>
-        </AnimatePresence>
-
-        {/* Project Stats */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.3 }}
-          className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6"
-        >
-          {[
-            { label: 'Total Projects', value: '10+', color: 'text-primary-400' },
-            { label: 'AI/ML Projects', value: '4+', color: 'text-primary-500' },
-            { label: 'Technologies Used', value: '15+', color: 'text-accent-500' },
-            { label: 'Code Commits', value: '500+', color: 'text-accent-600' }
-          ].map((stat, index) => (
-            <motion.div
-              key={stat.label}
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
-              className="text-center p-6 bg-secondary-900/30 rounded-xl border border-primary-500/20"
-            >
-              <div className={`text-3xl font-bold ${stat.color} mb-2`}>{stat.value}</div>
-              <div className="text-secondary-400 text-sm">{stat.label}</div>
-            </motion.div>
-          ))}
         </motion.div>
       </div>
     </section>

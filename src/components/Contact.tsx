@@ -51,14 +51,14 @@ const Contact = () => {
       label: 'Location',
       value: 'Chennai, Tamil Nadu, India',
       href: null,
-      color: 'text-accent-500'
+      color: 'text-primary-400'
     },
     {
       icon: Calendar,
       label: 'Availability',
       value: 'Open to opportunities',
       href: null,
-      color: 'text-accent-600'
+      color: 'text-primary-500'
     }
   ];
 
@@ -81,8 +81,8 @@ const Contact = () => {
       icon: MessageCircle,
       label: 'WhatsApp',
       href: 'https://wa.me/919150654888',
-      color: 'hover:text-accent-500',
-      bgColor: 'hover:bg-accent-700'
+      color: 'hover:text-primary-400',
+      bgColor: 'hover:bg-primary-700'
     }
   ];
 
@@ -311,7 +311,7 @@ const Contact = () => {
             <motion.span
               animate={{ scale: [1, 1.2, 1] }}
               transition={{ duration: 1, repeat: Infinity }}
-              className="text-accent-500"
+              className="text-primary-400"
             >
             </motion.span>
             <span></span>

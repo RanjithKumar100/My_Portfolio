@@ -368,18 +368,8 @@ const Contact = () => {
           className="text-center mt-16 pt-8 border-t border-primary-500/20"
         >
           <p className="text-secondary-400 mb-4">
-            © 2025 Ranjith Kumar. Built with React, TypeScript & Tailwind CSS.
+            @2025 Built by Ranjith Kumar
           </p>
-          <div className="flex justify-center items-center gap-2 text-secondary-500">
-            <span></span>
-            <motion.span
-              animate={{ scale: [1, 1.2, 1] }}
-              transition={{ duration: 1, repeat: Infinity }}
-              className="text-primary-400"
-            >
-            </motion.span>
-            <span></span>
-          </div>
         </motion.div>
       </div>
     </section>

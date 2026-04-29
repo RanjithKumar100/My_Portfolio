@@ -134,10 +134,6 @@ const Contact = () => {
             Get In <span className="gradient-text">Touch</span>
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-primary-500 via-primary-600 to-accent-600 mx-auto mb-8"></div>
-          <p className="text-secondary-400 text-lg max-w-3xl mx-auto">
-            I'm always interested in hearing about new opportunities and exciting projects.
-            Let's discuss how we can work together to bring innovative ideas to life!
-          </p>
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-12">

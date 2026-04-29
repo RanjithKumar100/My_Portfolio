@@ -8,7 +8,7 @@ const Projects = () => {
     {
       title: 'DeepClassify - Object Classification',
       description: 'AI-powered traffic system for real-time vehicle counting and detection using computer vision and machine learning.',
-      image: 'deepclassify.png',
+      image: '/Personal_Portfolio/projects/deepclassify.png',
       technologies: ['Python', 'Computer Vision', 'Machine Learning', 'OpenCV'],
       github: 'https://github.com/RanjithKumar100/Object_Detection_CV',
       featured: false,
@@ -70,7 +70,7 @@ const Projects = () => {
     {
       title: 'Data Structures & Algorithms',
       description: 'Comprehensive implementation of various data structures and algorithms in C++ and Python. Includes sorting algorithms, graph algorithms, dynamic programming solutions, and competitive programming solutions.',
-      image: 'data_structures.png',
+      image: '/Personal_Portfolio/projects/data_structures.png',
       technologies: ['C++', 'Python', 'Data Structures', 'Algorithms', 'Problem Solving'],
       github: 'https://github.com/RanjithKumar100/Coding-Problems',
       demo: 'https://demo-link.com',
@@ -117,11 +117,11 @@ const Projects = () => {
                   project.featured ? 'lg:col-span-2' : ''
                 }`}
               >
-                <div className="relative overflow-hidden group h-48 flex-shrink-0">
+                <div className="relative overflow-hidden group h-56 flex-shrink-0">
                   <img
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                    className="w-full h-full object-cover object-center transition-transform duration-300 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-secondary-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-4">
                     <div className="flex gap-3">

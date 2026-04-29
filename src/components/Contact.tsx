@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Mail, Phone, MapPin, Send, Github, Linkedin, MessageCircle, Calendar, CheckCircle, XCircle } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, Github, Linkedin, MessageCircle, CheckCircle, XCircle } from 'lucide-react';
 import emailjs from '@emailjs/browser';
 
 const Contact = () => {
@@ -85,13 +85,6 @@ const Contact = () => {
       value: 'Chennai, Tamil Nadu, India',
       href: null,
       color: 'text-primary-400'
-    },
-    {
-      icon: Calendar,
-      label: 'Availability',
-      value: 'Open to opportunities',
-      href: null,
-      color: 'text-primary-500'
     }
   ];
 

@@ -44,7 +44,7 @@ const Projects = () => {
     {
       title: 'PharmaAssist - Q&A Chatbot',
       description: 'AI-powered PDF chatbot that uses NLP and Generative AI with FAISS for fast, context-aware document search and accurate, citation-based responses.',
-      image: 'https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: '/https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=800',
       technologies: ['Python', 'NLP', 'GenAI', 'FAISS'],
       github: 'https://github.com/RanjithKumar100/Q-A-ChatBot-For-Documentation',
       demo: 'https://demo-link.com',

@@ -257,7 +257,7 @@ const Hero = () => {
             </motion.a>
 
             <motion.a
-              href="/Personal_Portfolio/RANJITH_KUMAR_RESUME.pdf"
+              href="/RANJITH_KUMAR_RESUME.pdf"
               download="Ranjith_Kumar_Resume.pdf"
               whileHover={{
                 scale: 1.05,

@@ -26,37 +26,37 @@ const Experience = () => {
       title: 'PrepInsta Certified C++ Developer',
       issuer: 'PrepInsta',
       type: 'Programming',
-      image: '/Personal_Portfolio/certificates/certificate_DSA in C++.jpg'
+      image: '/certificates/certificate_DSA in C++.jpg'
     },
     {
       title: 'Big Data in AI',
       issuer: 'LinkedIn',
       type: 'Emerging Tech',
-      image: '/Personal_Portfolio/certificates/Big Data in AI.jpg'
+      image: '/certificates/Big Data in AI.jpg'
     },
     {
       title: 'MySQL Certificate',
       issuer: 'Guvi',
       type: 'Database',
-      image: '/Personal_Portfolio/certificates/MySQL.jpg'
+      image: '/certificates/MySQL.jpg'
     },
     {
       title: 'Introduction to Cloud Computing',
       issuer: 'Infosys Springboard',
       type: 'Cloud',
-      image: '/Personal_Portfolio/certificates/Cloud_Computing.jpg'
+      image: '/certificates/Cloud_Computing.jpg'
     },
     {
       title: 'IOT and ES',
       issuer: 'InternEzy',
       type: 'IOT',
-      image: '/Personal_Portfolio/certificates/IOT_With_ES.jpg'
+      image: '/certificates/IOT_With_ES.jpg'
     },
     {
       title: 'Introduction to Data Science',
       issuer: 'Cisco',
       type: 'Data Science',
-      image: '/Personal_Portfolio/certificates/Introduction_to_DataScience.jpg'
+      image: '/certificates/Introduction_to_DataScience.jpg'
     }
   ];
 
@@ -66,21 +66,21 @@ const Experience = () => {
       title: 'IEEE Publication',
       description: '"SecureNet" - Adaptive IoT Botnet Attack Detection ',
       link: 'View Publication',
-      image: '/Personal_Portfolio/active engagements/Paper Presentation.jpg'
+      image: '/active engagements/Paper Presentation.jpg'
     },
     {
       icon: '🥇',
       title: 'IEEE CIS',
       description: 'Senior Domain Associate',
       link: 'View Certificate',
-      image: '/Personal_Portfolio/active engagements/IEEE_CS.jpg'
+      image: '/active engagements/IEEE_CS.jpg'
     },
     {
       icon: '🏆',
       title: 'Talos 3.0 (Cognitive Clues)',
       description: '1st place - Built an AI-driven puzzle solver at CIT College inter-college competition.',
       link: 'View Award',
-      image: '/Personal_Portfolio/active engagements/cognitive clues.jpeg'
+      image: '/active engagements/cognitive clues.jpeg'
     },
   ];
 

@@ -6,6 +6,12 @@ A modern, responsive portfolio website built with React, TypeScript, and Tailwin
 
 **[View Portfolio](https://ranjithkumar100.github.io/My_Portfolio/)**
 
+> **Note:** If you see a 404 error or blank page, make sure GitHub Pages is enabled:
+> 1. Go to your repository **Settings** > **Pages**
+> 2. Set **Source** to "Deploy from a branch"
+> 3. Select branch: **gh-pages** and folder: **/ (root)**
+> 4. Click **Save** and wait 1-2 minutes for deployment
+
 ## ✨ Features
 
 - **Modern UI/UX**: Clean and professional design with smooth animations

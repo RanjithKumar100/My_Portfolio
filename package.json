@@ -3,10 +3,10 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://ranjithkumar100.github.io/Personal_Portfolio",
+  "homepage": "https://ranjithkumar100.github.io/My_Portfolio",
   "repository": {
     "type": "git",
-    "url": "https://github.com/RanjithKumar100/Personal_Portfolio"
+    "url": "https://github.com/RanjithKumar100/My_Portfolio"
   },
   "scripts": {
     "dev": "vite",
@@ -14,7 +14,7 @@
     "preview": "vite preview",
     "lint": "eslint .",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@capacitor/cli": "^7.4.0",

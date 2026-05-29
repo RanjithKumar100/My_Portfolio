@@ -1,20 +1,45 @@
 import { motion } from 'framer-motion';
-import { ExternalLink, Github, Star, Calendar, Brain, Shield, Bot } from 'lucide-react';
+import { Github, Star, Calendar, Brain, Shield, Bot } from 'lucide-react';
 
 const Projects = () => {
   
   const projects = [
     // === FEATURED AI/ML PROJECTS ===
     {
-      title: 'DeepClassify - Object Classification',
-      description: 'AI-powered traffic system for real-time vehicle counting and detection using computer vision and machine learning.',
-      image: '/Personal_Portfolio/projects/deepclassify.png',
-      technologies: ['Python', 'Computer Vision', 'Machine Learning', 'OpenCV'],
-      github: 'https://github.com/RanjithKumar100/Object_Detection_CV',
+      title: 'TimeWise-Management Tool',
+      description: 'TimeWise CRM is a full-stack time management system built with Next.js and MongoDB, featuring time tracking, role-based access, analytics, secure authentication, leave management, and real-time monitoring with a modern UI.',
+      image: '/Personal_Portfolio/projects/Timewise.png',
+      technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Node.js'],
+      github: 'https://github.com/RanjithKumar100/TimeWise_FireBase_CRM',
+      demo: 'https://demo-link.com',
+      featured: false,
+      date: '2025',
+      status: 'completed',
+      icon: Brain
+    },
+    {
+      title: 'LOF_Agent - AI Chatbot',
+      description: 'Developing an AI-powered chatbot using Natural Language Processing to enhance user interaction on the Lab of Future website. It is designed to understand user queries, provide intelligent, real-time responses, and improve overall user seamless conversational experience.',
+      image: '/Personal_Portfolio/projects/chatbot.png',
+      technologies: ['Python', 'NLP', 'GenAI', 'Web Integration'],
+      github: 'https://github.com/RanjithKumar100/LOF_Bot',
+      demo: 'https://demo-link.com',
+      featured: false,
+      date: '2025',
+      status: 'completed',
+      icon: Bot
+    },
+    {
+      title: 'SecureNet - IoT Botnet Detection',
+      description: 'Developed a hybrid CNN and Reinforcement Learning (RL) model for detecting anomalous network traffic using the N-BaIoT dataset. The model improves by identifying abnormal traffic patterns and enhancing network security.',
+      image: '/Personal_Portfolio/projects/securenet.png',
+      technologies: ['Python', 'CNN', 'Reinforcement Learning','N-BaIoT Dataset'],
+      github: 'https://github.com/RanjithKumar100',
+      demo: 'https://demo-link.com',
       featured: false,
       date: '2024',
       status: 'completed',
-      icon: Brain
+      icon: Shield
     },
     {
       title: 'PharmaAssist - Q&A Chatbot',
@@ -28,40 +53,15 @@ const Projects = () => {
       status: 'completed',
       icon: Bot
     },
-    {
-      title: 'SecureNet - IoT Botnet Detection',
-      description: 'Hybrid CNN and RL model for detecting anomalous network traffic using the N-BaIoT dataset with high accuracy.',
-      image: '/Personal_Portfolio/projects/securenet.png',
-      technologies: ['Python', 'CNN', 'Reinforcement Learning','N-BaIoT Dataset'],
-      github: 'https://github.com/RanjithKumar100',
-      demo: 'https://demo-link.com',
-      featured: false,
-      date: '2024',
-      status: 'completed',
-      icon: Shield
-    },
-    {
-      title: 'LOF_Agent - AI Chatbot',
-      description: 'Developing an AI-powered chatbot using NLP to enhance user interaction and deliver intelligent responses for the Lab of Future website.',
-      image: 'https://images.pexels.com/photos/8386434/pexels-photo-8386434.jpeg?auto=compress&cs=tinysrgb&w=800',
-      technologies: ['Python', 'NLP', 'AI', 'Chatbot Development', 'Web Integration'],
-      github: 'https://github.com/RanjithKumar100/LOF_Agent',
-      demo: 'https://demo-link.com',
-      featured: false,
-      date: '2025',
-      status: 'in-progress',
-      icon: Bot
-    },
     // === WEB DEVELOPMENT PROJECTS ===
     {
-      title: 'TimeWise',
-      description: 'TimeWise CRM is a full-stack time management system built with Next.js and MongoDB, featuring time tracking, role-based access, analytics, secure authentication, leave management, and real-time monitoring with a modern UI.',
-      image: '/Personal_Portfolio/projects/Timewise.png',
-      technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'Responsive Design'],
-      github: 'https://github.com/RanjithKumar100/Personal_Portfolio',
-      demo: 'https://demo-link.com',
+      title: 'DeepClassify - Object Classification',
+      description: 'AI-powered traffic system for real-time vehicle counting and detection using computer vision and machine learning.',
+      image: '/Personal_Portfolio/projects/deepclassify.png',
+      technologies: ['Python', 'Computer Vision', 'Machine Learning', 'OpenCV'],
+      github: 'https://github.com/RanjithKumar100/Object_Detection_CV',
       featured: false,
-      date: '2025',
+      date: '2024',
       status: 'completed',
       icon: Brain
     },
@@ -134,17 +134,6 @@ const Projects = () => {
                       >
                         <Github size={20} />
                       </motion.a>
-                      {project.demo && (
-                        <motion.a
-                          href={project.demo}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          whileHover={{ scale: 1.1 }}
-                          className="p-2 bg-secondary-800/80 rounded-full text-white hover:text-primary-500 transition-colors"
-                        >
-                          <ExternalLink size={20} />
-                        </motion.a>
-                      )}
                     </div>
                   </div>
 
@@ -167,42 +156,46 @@ const Projects = () => {
                   </div>
                 </div>
 
-                <div className="p-6 flex flex-col flex-grow">
-                  <div className="flex items-start justify-between mb-3 gap-3">
-                    <h3 className="text-xl font-bold text-white flex-grow">{project.title}</h3>
-                    <div className="flex items-center gap-2 flex-shrink-0">
+                <div className="p-5 flex flex-col flex-grow h-full">
+                  {/* Title and Date */}
+                  <div className="flex items-start justify-between gap-2 mb-2">
+                    <h3 className="text-lg font-bold text-white leading-snug">{project.title}</h3>
+                    <div className="flex items-center gap-1 flex-shrink-0">
                       {project.featured && (
                         <Star className="w-4 h-4 text-accent-400 fill-current" />
                       )}
-                      <div className="flex items-center gap-1 text-secondary-400 text-sm whitespace-nowrap">
-                        <Calendar size={14} />
-                        {project.date}
+                      <div className="flex items-center gap-1 text-secondary-400 text-xs whitespace-nowrap">
+                        <Calendar size={12} />
+                        <span>{project.date}</span>
                       </div>
                     </div>
                   </div>
 
-                  <p className="text-secondary-400 mb-4 leading-relaxed text-sm">{project.description}</p>
+                  {/* Description */}
+                  <p className="text-secondary-400 leading-relaxed text-sm mb-3">{project.description}</p>
 
-                  <div className="flex flex-wrap gap-2 mb-4">
+                  {/* Technologies */}
+                  <div className="flex flex-wrap gap-1.5 mb-4">
                     {project.technologies.map((tech, idx) => (
                       <motion.span
                         key={idx}
                         whileHover={{ scale: 1.05 }}
-                        className="px-3 py-1 bg-gradient-to-r from-primary-600/20 to-primary-700/20 text-primary-300 rounded-md text-xs border border-primary-600/30 font-medium"
+                        className="px-2.5 py-0.5 bg-gradient-to-r from-primary-600/20 to-primary-700/20 text-primary-300 rounded text-xs border border-primary-600/30 font-medium"
                       >
                         {tech}
                       </motion.span>
                     ))}
                   </div>
 
-                  <div className="flex gap-3 mt-auto pt-4 border-t border-secondary-800/50">
+                  {/* Footer - Always at Bottom */}
+                  <div className="mt-auto pt-3 border-t border-secondary-800/50">
                     <a
                       href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 text-secondary-400 hover:text-primary-400 transition-colors"
+                      className="inline-flex items-center gap-1.5 text-secondary-400 hover:text-primary-400 transition-colors"
                     >
-                      <Github size={16} />
+                      <Github size={14} />
                       <span className="text-sm font-medium">View Code</span>
                     </a>
                   </div>

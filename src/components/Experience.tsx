@@ -16,7 +16,7 @@ const Experience = () => {
         'Leveraging NLP and AI to enhance user interaction',
       ],
       technologies: ['Python', 'NLP', 'AI/ML', 'Docker', 'GitHub'],
-      link: 'https://github.com/RanjithKumar100/LOF_Agent',
+      link: 'https://www.laboffuture.com/',
       current: true
     }
   ];

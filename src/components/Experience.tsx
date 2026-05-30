@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Calendar, MapPin, Briefcase, ExternalLink, X } from 'lucide-react';
 
 const Experience = () => {
+  const BASE_URL = import.meta.env.BASE_URL;
   const [selectedCertificate, setSelectedCertificate] = useState<string | null>(null);
   const experiences = [
     {
@@ -26,37 +27,37 @@ const Experience = () => {
       title: 'PrepInsta Certified C++ Developer',
       issuer: 'PrepInsta',
       type: 'Programming',
-      image: '/certificates/certificate_DSA in C++.jpg'
+      image: `${BASE_URL}certificates/certificate_DSA in C++.jpg`
     },
     {
       title: 'Big Data in AI',
       issuer: 'LinkedIn',
       type: 'Emerging Tech',
-      image: '/certificates/Big Data in AI.jpg'
+      image: `${BASE_URL}certificates/Big Data in AI.jpg`
     },
     {
       title: 'MySQL Certificate',
       issuer: 'Guvi',
       type: 'Database',
-      image: '/certificates/MySQL.jpg'
+      image: `${BASE_URL}certificates/MySQL.jpg`
     },
     {
       title: 'Introduction to Cloud Computing',
       issuer: 'Infosys Springboard',
       type: 'Cloud',
-      image: '/certificates/Cloud_Computing.jpg'
+      image: `${BASE_URL}certificates/Cloud_Computing.jpg`
     },
     {
       title: 'IOT and ES',
       issuer: 'InternEzy',
       type: 'IOT',
-      image: '/certificates/IOT_With_ES.jpg'
+      image: `${BASE_URL}certificates/IOT_With_ES.jpg`
     },
     {
       title: 'Introduction to Data Science',
       issuer: 'Cisco',
       type: 'Data Science',
-      image: '/certificates/Introduction_to_DataScience.jpg'
+      image: `${BASE_URL}certificates/Introduction_to_DataScience.jpg`
     }
   ];
 
@@ -66,21 +67,21 @@ const Experience = () => {
       title: 'IEEE Publication',
       description: '"SecureNet" - Adaptive IoT Botnet Attack Detection ',
       link: 'View Publication',
-      image: '/active engagements/Paper Presentation.jpg'
+      image: `${BASE_URL}active engagements/Paper Presentation.jpg`
     },
     {
       icon: '🥇',
       title: 'IEEE CIS',
       description: 'Senior Domain Associate',
       link: 'View Certificate',
-      image: '/active engagements/IEEE_CS.jpg'
+      image: `${BASE_URL}active engagements/IEEE_CS.jpg`
     },
     {
       icon: '🏆',
       title: 'Talos 3.0 (Cognitive Clues)',
       description: '1st place - Built an AI-driven puzzle solver at CIT College inter-college competition.',
       link: 'View Award',
-      image: '/active engagements/cognitive clues.jpeg'
+      image: `${BASE_URL}active engagements/cognitive clues.jpeg`
     },
   ];
 

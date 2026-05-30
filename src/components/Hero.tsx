@@ -257,7 +257,7 @@ const Hero = () => {
             </motion.a>
 
             <motion.a
-              href="/RANJITH_KUMAR_RESUME.pdf"
+              href={`${import.meta.env.BASE_URL}RANJITH_KUMAR_RESUME.pdf`}
               download="Ranjith_Kumar_Resume.pdf"
               whileHover={{
                 scale: 1.05,

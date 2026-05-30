@@ -2,13 +2,14 @@ import { motion } from 'framer-motion';
 import { Github, Star, Calendar, Brain, Shield, Bot } from 'lucide-react';
 
 const Projects = () => {
-  
+  const BASE_URL = import.meta.env.BASE_URL;
+
   const projects = [
     // === FEATURED AI/ML PROJECTS ===
     {
       title: 'TimeWise-Management Tool',
       description: 'TimeWise CRM is a full-stack time management system built with Next.js and MongoDB, featuring time tracking, role-based access, analytics, secure authentication, leave management, and real-time monitoring with a modern UI.',
-      image: '/projects/Timewise.png',
+      image: `${BASE_URL}projects/Timewise.png`,
       technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Node.js'],
       github: 'https://github.com/RanjithKumar100/TimeWise_FireBase_CRM',
       demo: 'https://demo-link.com',
@@ -20,7 +21,7 @@ const Projects = () => {
     {
       title: 'LOF_Agent - AI Chatbot',
       description: 'Developing an AI-powered chatbot using Natural Language Processing to enhance user interaction on the Lab of Future website. It is designed to understand user queries, provide intelligent, real-time responses, and improve overall user seamless conversational experience.',
-      image: '/projects/chatbot.png',
+      image: `${BASE_URL}projects/chatbot.png`,
       technologies: ['Python', 'NLP', 'GenAI', 'Web Integration'],
       github: 'https://github.com/RanjithKumar100/LOF_Bot',
       demo: 'https://demo-link.com',
@@ -32,7 +33,7 @@ const Projects = () => {
     {
       title: 'SecureNet - IoT Botnet Detection',
       description: 'Developed a hybrid CNN and Reinforcement Learning (RL) model for detecting anomalous network traffic using the N-BaIoT dataset. The model improves by identifying abnormal traffic patterns and enhancing network security.',
-      image: '/projects/securenet.png',
+      image: `${BASE_URL}projects/securenet.png`,
       technologies: ['Python', 'CNN', 'Reinforcement Learning','N-BaIoT Dataset'],
       github: 'https://github.com/RanjithKumar100',
       demo: 'https://demo-link.com',
@@ -57,7 +58,7 @@ const Projects = () => {
     {
       title: 'DeepClassify - Object Classification',
       description: 'AI-powered traffic system for real-time vehicle counting and detection using computer vision and machine learning.',
-      image: '/projects/deepclassify.png',
+      image: `${BASE_URL}projects/deepclassify.png`,
       technologies: ['Python', 'Computer Vision', 'Machine Learning', 'OpenCV'],
       github: 'https://github.com/RanjithKumar100/Object_Detection_CV',
       featured: false,
@@ -70,7 +71,7 @@ const Projects = () => {
     {
       title: 'Data Structures & Algorithms',
       description: 'Comprehensive implementation of various data structures and algorithms in C++ and Python. Includes sorting algorithms, graph algorithms, dynamic programming solutions, and competitive programming solutions.',
-      image: '/projects/data_structures.png',
+      image: `${BASE_URL}projects/data_structures.png`,
       technologies: ['C++', 'Python', 'Data Structures', 'Algorithms', 'Problem Solving'],
       github: 'https://github.com/RanjithKumar100/Coding-Problems',
       demo: 'https://demo-link.com',
